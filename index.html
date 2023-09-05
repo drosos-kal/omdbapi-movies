@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./index.js"></script>
+</head>
+<body>
+
+    <div class="center">
+        <div class="bot-gap">
+            <span class="title">Αναζήτηση Ταινιών</span>
+        </div>
+        <div class="bot-gap">
+            <form>
+                <input id="searchInput" type="text" class="search rounded" 
+                placeholder="Πληκτρολογήστε έναν τίτλο" autofocus>
+                <img id="waiting" class="hidden valign-middle" src="./img/waiting.gif" alt="">
+
+            </form>
+        </div>
+        <div class="movie hidden">
+            <div class="movie-poster">
+                <img id="image" class="valign-middle" alt="">
+            </div>
+            <div class="movie-info">
+                <div class="basic">
+                    <div class="text-left block-text">
+                        <a id="favoriteLing" href="#">
+                            <img src="./img/favorite.png" alt="favorite" width="25" height="25">
+                        </a>
+                    </div>
+                    <div id="title" class="movie-title text-left block-text">
+                        Τίτλος Ταινίας
+                    </div>
+                    <div class="text-left block-text">
+                        <div id="year" class="movie-text">Έτος παραγωγής: <span></span></div>
+                        <div id="runtime" class="movie-text">Διάρκεια: <span></span></div>
+                        <div id="genre" class="movie-text">Είδος: <span></span></div>
+                    </div>
+                    <div class="text-left block-text">
+                        <a id="imdbId" target="blank">
+                            <img id="imdb" class="valign-middle" src="./img/imdb.png" alt="">
+                        </a>
+                        <span id="imdbRating" class="movie-text rating" data-scale="10"></span>
+                    </div>
+                    <div class="text-left movie-text block-text">
+                        <p id="plot" class="collapsible"></p>
+                    </div>
+                    <div class="extended text-left hidden">
+                        <div id="director" class="movie-text"><strong>Σκηνοθεσία: </strong><span></span></div>
+                        <div id="actors" class="movie-text"><strong>Ηθοποιοί: </strong><span></span></div>
+                        <div id="production" class="movie-text"><strong>Παραγωγή: </strong><span></span></div>
+                        <div id="boxOffice" class="movie-text"><strong>Box Office: </strong><span></span></div>
+                        <div id="language" class="movie-text"><strong>Γλώσσα: </strong><span></span></div>
+                        <div id="rated" class="movie-text"><strong>Καταλληλότητα: </strong><span></span></div>
+                    </div>
+                    <a id="showMore" class="show-more" href="#">Περισσότερα
+                        <img class="valign-middle icon-small" src="./img/clacket.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="not-found hidden">
+        <span>Δεν βρέθηκαν ταινίες σύμφωνα με τα κριτήρια αναζήτησης</span>
+    </div>
+    <div class="error hidden">
+        <span>Παρουσιάστηκε σφάλμα κατά την κλήση της υπηρεσίας</span>
+    </div>
+</body>
+</html>
